@@ -139,16 +139,19 @@ for index, category in enumerate(categories):
             publication = "No publication found"
         print(publication)
 
+        # Remove URL fields from scraping and output
         # book_dict = {
+        #     "category": genre,
+        #     "votes": book_votes,
         #     "title": book_name,
         #     "description": book_description,
-        #     "author": {
-        #         "name": book_author,
-        #         "about": author_description,
-        #         "avatar_url": author_avatar_url
-        #     },
-        #     "genre": genre,
+        #     "author_name": book_author,
+        #     "author_about": author_description,
+        #     "avatar_url": author_avatar_url,
         #     "pages": pages_format,
+        #     "rating": book_rating,
+        #     "ratings": book_ratings,
+        #     "reviews": book_reviews,
         #     "publication_info": publication,
         #     "img_url": book_img_url,
         #     "book_url": f"{app_url}{book_url}"
@@ -161,24 +164,18 @@ for index, category in enumerate(categories):
             "description": book_description,
             "author_name": book_author,
             "author_about": author_description,
-            "avatar_url": author_avatar_url,
             "pages": pages_format,
             "rating": book_rating,
             "ratings": book_ratings,
             "reviews": book_reviews,
-            "publication_info": publication,
-            "img_url": book_img_url,
-            "book_url": f"{app_url}{book_url}"
+            "publication_info": publication
         }
 
         books.append(book_dict)
 
-        print(book_img_url)
-        # download_image("images/books/", book_img_url, f"{book_name}.jpg")
-
-        print(author_avatar_url)
-        # download_image("images/authors/", author_avatar_url, f"{book_author}.jpg")
-
+        # Remove print(book_img_url) and print(author_avatar_url)
+        # Remove download_image calls
+        # Remove 'avatar_url', 'img_url', 'book_url' from CSV output
         csv_filename = "books.csv"
 
         # check if first entry, write the header
