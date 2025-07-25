@@ -1,0 +1,16 @@
+# Ignore data files
+/data/
+*.csv
+*.xlsx
+*.xls
+
+# Ignore Python cache and environments
+__pycache__/
+.venv/
+*.pyc
+
+# Ignore Power BI files
+*.pbix
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/ 
